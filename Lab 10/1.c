@@ -13,8 +13,7 @@ int size();
 Node *head = NULL;
 int main(){
     int op , num  ;
-
-    while(1){
+    do{
         printf("select Options\n");
         printf("1.Push\n");
         printf("2.Pop\n");
@@ -42,17 +41,16 @@ int main(){
                                 printf("size is : %d \n",size());
                                 break;
 
-
                         case 5:
                                 exit(0);
                 }
-        }
+        }while (op != 5);
+
+        
         return 0;
   }
-
 void push(int num){
    Node *newnode;
-
    newnode = (Node *)malloc(sizeof(Node));
    newnode->value = num;
    //if(head == NULL){
@@ -101,5 +99,4 @@ int size(){
       }
       return count ;
       }
-
 }
